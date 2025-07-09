@@ -34,7 +34,9 @@
       const SOUNDS = {
         ON: new Audio('https://assets.codepen.io/605876/switch-on.mp3')
       };
-      SOUNDS.ON.play();
+      try {
+        SOUNDS.ON.play().catch(() => {});
+      } catch (e) {}
     });
   </script>
   <script src="./script.js"></script>
